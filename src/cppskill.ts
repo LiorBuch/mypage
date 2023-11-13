@@ -1,0 +1,40 @@
+import {Skill} from "./skills.ts";
+
+const SKILLS_CPP: { [key: string]: Skill } = {
+    sdl: {
+        name: "SDL 2",
+        category: "Game Dev",
+        description: "Django Framework for backend servers and authentication provider for websites.",
+        img: "https://upload.wikimedia.org/wikipedia/commons/1/16/Simple_DirectMedia_Layer%2C_Logo.svg",
+        badgeColor: "teal",
+        alt: "sdl"
+    },
+    ue:{
+        name: "Unreal Engine 5",
+        category: "Game Dev",
+        description: "Math Lib",
+        img: "https://cdn2.unrealengine.com/ue-logo-1400x788-1400x788-8f185e1e3635.jpg",
+        badgeColor: "teal",
+        alt: "ue"
+    },
+    opencascade:{
+        name: "Open Cascade API",
+        category: "CAD",
+        description: "Math Lib",
+        img: "data:image/png;base64,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",
+        badgeColor: "yellow",
+        alt: "opencascade"
+    },
+    cython:{
+        name: "Cython",
+        category: "Core",
+        description: "Data Lib",
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Cython_logo.svg/1200px-Cython_logo.svg.png",
+        badgeColor: "blue",
+        alt: "cython"
+    },
+}
+
+
+
+export default SKILLS_CPP
