@@ -16,7 +16,7 @@ import {
 import {
     IconAlphabetLatin,
     IconAntenna, IconBrandLinkedin,
-    IconBriefcaseFilled,
+    IconBriefcaseFilled, IconHome,
     IconInfoCircle, IconMail,
     IconSchool,
     IconStarFilled
@@ -38,6 +38,10 @@ function DesktopSite() {
             <AppShell.Header>
                 <Tabs defaultValue="about-me">
                     <Tabs.List>
+                        <Tabs.Tab value="projects" leftSection={<IconHome style={iconStyle}/>}
+                                  onClick={() => changeTab("home")}>
+                            Home
+                        </Tabs.Tab>
                         <Tabs.Tab value="about-me" leftSection={<IconAlphabetLatin style={iconStyle}/>}
                                   onClick={() => changeTab("about-me")}>
                             About Me
@@ -59,6 +63,7 @@ function DesktopSite() {
                 {tab === "about-me" && <AboutMeTab/>}
                 {tab === "skills" && <SkillsTab/>}
                 {tab === "projects" && <ProjectsTab/>}
+                {tab === "home" && <HomeTab/>}
             </AppShell.Main>
             <AppShell.Footer>
                 <Flex direction={"row"} justify={"center"} align={"center"} gap={"xl"} p={"sm"}>
@@ -73,11 +78,13 @@ function DesktopSite() {
 }
 
 function AboutMeTab() {
+    const platform = navigator.platform
+    console.log("this is the issue",platform)
     return (
         <Flex>
             <ScrollArea h={window.innerHeight - 200}>
                 <ScrollArea.Autosize>
-                    <Card shadow="sm" padding="lg" m={"sm"} ml={"sm"} mr={"sm"} radius="md" withBorder w={"50%"}>
+                    <Card shadow="sm" padding="lg" m={"sm"} ml={"sm"} mr={"sm"} radius="md" withBorder w={platform==="Win32"? "50%" : "100%"}>
 
                         <Flex direction={"column"}>
                             <Blockquote color="blue" radius="xs" iconSize={40} icon={<IconInfoCircle/>} mt="xl" ml={"sm"}>
@@ -282,5 +289,10 @@ function ProjectsTab() {
         </>
     )
 }
-
+function HomeTab() {
+    return (<>
+            Hello from Home Tab!
+        </>
+    )
+}
 export default DesktopSite
