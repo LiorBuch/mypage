@@ -26,6 +26,7 @@ import {Carousel} from "@mantine/carousel";
 import SKILLS_PYTHON from "../../skills.ts";
 import SKILLS_CPP from "../../cppskill.ts";
 import SKILLS_JAVA from "../../skilljava.ts";
+import SKILLS_JS from "../../skillsjs";
 
 function DesktopSite() {
     const iconStyle = {width: rem(12), height: rem(12)};
@@ -246,6 +247,29 @@ function SkillsTab() {
             </Card.Section>
         </Card>
     </Carousel.Slide>))
+    const slidesJS = Object.keys(SKILLS_JS).map((key) => (<Carousel.Slide p={"md"} key={key}>
+        <Card shadow="sm" padding="lg" radius="md" withBorder w={260}>
+            <Card.Section>
+                <Image
+                    src={SKILLS_JS[key].img}
+                    height={160}
+                    alt={SKILLS_JS[key].alt}
+                    fit={"contain"}
+                    width={160}
+                />
+                <Group justify="space-between" mt="md" mb="xs">
+                    <Text fw={500}>{SKILLS_JS[key].name}</Text>
+                    <Badge color={SKILLS_JS[key].badgeColor} variant="light">
+                        {SKILLS_JS[key].category}
+                    </Badge>
+                </Group>
+
+                <Text size="sm" c="dimmed">
+                    {SKILLS_JS[key].description}
+                </Text>
+            </Card.Section>
+        </Card>
+    </Carousel.Slide>))
     return (<Card shadow="sm" padding="lg" radius="md" withBorder w={"70%"}>
             <Flex direction={"column"}>
                 <Title> Python </Title>
@@ -258,7 +282,7 @@ function SkillsTab() {
                     align="start">
                     {slidesPython}
                 </Carousel>
-                <Title> C++ and C </Title>
+                <Title> C,C++ and C# </Title>
                 <Carousel
                     withIndicators
                     slideSize={{base: '100%', sm: '50%', md: '20%'}}
@@ -277,6 +301,16 @@ function SkillsTab() {
                     orientation={"horizontal"}
                     align="start">
                     {slidesJava}
+                </Carousel>
+                <Title> Java Script </Title>
+                <Carousel
+                    withIndicators
+                    slideSize={{base: '100%', sm: '50%', md: '20%'}}
+                    slideGap={{base: 0, sm: 'md'}}
+                    loop
+                    orientation={"horizontal"}
+                    align="start">
+                    {slidesJS}
                 </Carousel>
             </Flex>
         </Card>
