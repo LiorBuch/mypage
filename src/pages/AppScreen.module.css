@@ -1,0 +1,8 @@
+.header{
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 50%, rgba(40,150,172,1) 100%);
+}
+.fotter{
+    background: rgb(40,150,172);
+    background: linear-gradient(180deg,rgba(40,150,172,1) 0%, rgba(9,9,121,1) 50%,rgba(2,0,36,1)  100%);
+}

@@ -1,4 +1,4 @@
-import {Skill} from "./skills.ts";
+import { Skill } from "./skillspy.ts";
 
 const SKILLS_CPP: { [key: string]: Skill } = {
     sdl: {
@@ -9,7 +9,7 @@ const SKILLS_CPP: { [key: string]: Skill } = {
         badgeColor: "teal",
         alt: "sdl"
     },
-    ue:{
+    ue: {
         name: "Unreal Engine 5",
         category: "Game Dev",
         description: "Math Lib",
@@ -17,7 +17,7 @@ const SKILLS_CPP: { [key: string]: Skill } = {
         badgeColor: "teal",
         alt: "ue"
     },
-    opencascade:{
+    opencascade: {
         name: "Open Cascade API",
         category: "CAD",
         description: "Math Lib",
@@ -25,7 +25,7 @@ const SKILLS_CPP: { [key: string]: Skill } = {
         badgeColor: "yellow",
         alt: "opencascade"
     },
-    cython:{
+    cython: {
         name: "Cython",
         category: "Core",
         description: "Data Lib",

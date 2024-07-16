@@ -1,6 +1,6 @@
-import {Skill} from "./skills.ts";
+import { Skill } from "./skillspy.ts";
 
-const SKILLS_JAVA: { [key: string]: Skill } = {
+const SKILLS_JS: { [key: string]: Skill } = {
     android: {
         name: "Android Studio",
         category: "App",
@@ -9,7 +9,7 @@ const SKILLS_JAVA: { [key: string]: Skill } = {
         badgeColor: "green",
         alt: "andro"
     },
-    gamejava:{
+    gamejava: {
         name: "Java Game Dev",
         category: "Game Dev",
         description: "Math Lib",
@@ -17,7 +17,7 @@ const SKILLS_JAVA: { [key: string]: Skill } = {
         badgeColor: "teal",
         alt: "jde"
     },
-    okhttp:{
+    okhttp: {
         name: "Open Cascade API",
         category: "Web",
         description: "Math Lib",
@@ -29,4 +29,4 @@ const SKILLS_JAVA: { [key: string]: Skill } = {
 
 
 
-export default SKILLS_JAVA
+export default SKILLS_JS

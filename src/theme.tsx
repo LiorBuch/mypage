@@ -1,6 +1,12 @@
-import {createTheme} from "@mantine/core";
+import {createTheme, CSSVariablesResolver} from "@mantine/core";
 
-export const THEME = createTheme({
+export const DESKTOP_THEME = createTheme({
+    fontFamily: 'Verdana, sans-serif',
+    fontFamilyMonospace: 'Monaco, Courier, monospace',
+    headings: {fontFamily: 'Greycliff CF, sans-serif'},
+});
+
+export const MOBILE_THEME = createTheme({
     fontFamily: 'Verdana, sans-serif',
     fontFamilyMonospace: 'Monaco, Courier, monospace',
     headings: {fontFamily: 'Greycliff CF, sans-serif'},

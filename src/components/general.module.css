@@ -1,0 +1,7 @@
+.nav_btn {
+  color: #ddd;
+  transition: 0.3s;
+}
+.nav_btn:hover {
+  color: #ed550e;
+}
