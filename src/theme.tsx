@@ -1,4 +1,4 @@
-import {createTheme, CSSVariablesResolver} from "@mantine/core";
+import {createTheme} from "@mantine/core";
 
 export const DESKTOP_THEME = createTheme({
     fontFamily: 'Verdana, sans-serif',

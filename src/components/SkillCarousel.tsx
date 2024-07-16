@@ -1,6 +1,6 @@
 import { Carousel } from "@mantine/carousel";
 import { Skill } from "../data/skills/skillspy";
-import { Card, Group, Badge, Image, Text, Title, Divider, Center } from "@mantine/core";
+import { Card, Group, Badge, Image, Text, Title, Divider } from "@mantine/core";
 import { isMobile } from "react-device-detect";
 
 function SkillCarousel({ skill,title }: { skill: { [key: string]: Skill } , title:string }) {
