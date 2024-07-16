@@ -1,5 +1,6 @@
 import {
   Flex,
+  ScrollArea,
   Card,
   Blockquote,
   Box,
